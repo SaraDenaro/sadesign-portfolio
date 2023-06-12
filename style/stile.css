@@ -1,0 +1,1583 @@
+/* Gestione colori */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  color: #292929;
+}
+
+/* Top Button */
+.go-top-btn {
+  position: fixed;
+  z-index: 1000;
+  bottom: 35px;
+  right: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  background-color: #292929;
+  color: white;
+  font-size: 22px;
+  border: none;
+  -webkit-box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
+          box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.go-top-btn:hover {
+  background-color: #ffd602;
+  color: #292929;
+  -webkit-transition: all .30s;
+  transition: all .30s;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: normal;
+  /* Personalizzazione scrollbar - Firefox*/
+  scrollbar-color: #292929 white;
+}
+
+/* Personalizzazione scrollbar*/
+html::-webkit-scrollbar {
+  /* Chrome */
+  width: 10px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+html::-webkit-scrollbar-track {
+  /* Chrome */
+  background-color: white;
+  border: 1px solid #eaeaea;
+}
+
+html::-webkit-scrollbar-thumb {
+  /* Chrome */
+  background-color: #292929;
+  border-radius: 8px;
+}
+
+/* INIZIA QUI */
+header {
+  position: fixed;
+  z-index: 1000;
+  height: 100px;
+  width: 100%;
+  top: 0;
+  right: 0;
+  background: transparent;
+  background-color: white;
+  padding: 25px 20%;
+  -webkit-transition-duration: .3s;
+          transition-duration: .3s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.sticky {
+  -webkit-box-shadow: 0px 0px 40px 1px rgba(150, 150, 150, 0.1);
+          box-shadow: 0px 0px 40px 1px rgba(150, 150, 150, 0.1);
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #292929;
+}
+
+.cont-nav-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navbar {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #292929;
+}
+
+.nav-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 16px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+  color: #292929;
+}
+
+.nav-logo {
+  min-width: 200px;
+}
+
+.nav-menu li {
+  position: relative;
+  display: inline;
+  margin-left: 48px;
+}
+
+.nav-menu a {
+  font-size: 16px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+  padding: 10px 20px;
+  color: #292929;
+  text-decoration: none;
+}
+
+.nav-menu li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  background: #292929;
+  /* Sottolineatura link */
+  left: 0;
+  bottom: -4px;
+  -webkit-transition: ease .40s;
+  transition: ease .40s;
+}
+
+.nav-menu li a:hover::after {
+  width: 100%;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 2px;
+  margin: 5px auto;
+  background-color: #292929;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.secondary-button {
+  /* OUTLINE BUTTON - navbar */
+  height: 40px;
+  margin-left: 48px;
+  padding: 12px 16px;
+  background-color: transparent;
+  border: 2px solid #ffd602;
+  border-radius: 100px;
+  font-size: 14px;
+  line-height: 14px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+  /*light*/
+  letter-spacing: 0.4px;
+  -webkit-transition: all .30s;
+  transition: all .30s;
+}
+
+.secondary-button a {
+  text-decoration: none;
+  color: #292929;
+}
+
+.secondary-button:hover {
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid #292929;
+}
+
+.primary-button {
+  /*YELLOW BUTTON */
+  height: 40px;
+  margin-top: 32px;
+  padding: 14px 16px;
+  color: black;
+  background-color: #ffd602;
+  border: none;
+  border-radius: 100px;
+  font-size: 14px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+  /*light*/
+  letter-spacing: 0.4px;
+  -webkit-transition: all .30s;
+  transition: all .30s;
+}
+
+.primary-button:hover {
+  cursor: pointer;
+  background-color: #292929;
+  color: white;
+}
+
+.primary-button:active {
+  cursor: pointer;
+  background-color: #292929;
+  color: white;
+}
+
+.item {
+  /* Contenitore articoli di tutto il sito */
+  padding: 0;
+}
+
+.item img {
+  width: 100%;
+}
+
+section {
+  /* SECTION DI BASE */
+  padding: 80px 20% 0 20%;
+  height: 100vh;
+  /*border: 2px solid orange;*/
+}
+
+/* SECTION HOMEPAGE */
+.homepage {
+  position: relative;
+  height: 100vh;
+  height: 100%;
+}
+
+/* CONTENITORE ITEM HOMEPAGE */
+.box-cont-homepage {
+  width: 100%;
+  padding: 100px 0 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.item-xs-homepage {
+  width: 50%;
+  margin-right: 15px;
+}
+
+.item-dx-homepage {
+  width: 50%;
+  margin-left: 15px;
+}
+
+.item-dx-homepage img {
+  width: 100%;
+}
+
+/* SECTION PORTFOLIO */
+.portfolio {
+  position: relative;
+  padding-top: 160px;
+  height: 100%;
+  display: inline-block;
+  background-color: white;
+}
+
+.grid-portfolio {
+  /* GRIGLIA CONTENITRICE */
+  padding: 48px 0 0 0;
+  display: -ms-grid;
+  display: grid;
+  height: 100%;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
+  row-gap: 48px;
+  position: relative;
+}
+
+.box-cont-portfolio {
+  height: 100%;
+}
+
+.item {
+  position: relative;
+}
+
+.img-portfolio {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #eaeaea;
+  -webkit-transition: all .30s;
+  transition: all .30s;
+}
+
+.img-portfolio:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-box-shadow: 0px 0px 52px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 52px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* SECTION ABOUT */
+.about {
+  position: relative;
+  height: 100vh;
+  height: 100%;
+}
+
+.box-cont-about {
+  width: 100%;
+  padding-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.item-xs-about {
+  width: 50%;
+  margin-right: 15px;
+}
+
+.item-dx-about {
+  width: 50%;
+  margin-left: 15px;
+}
+
+.item-dx-about img {
+  width: 100%;
+}
+
+/* Sezione CV e SKILLS*/
+.cv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 40px 20%;
+}
+
+.box-cont-lavoro {
+  width: 50%;
+  padding-bottom: 0;
+  margin-right: 30px;
+}
+
+.box-cont-formazione {
+  width: 50%;
+  margin: 0;
+  padding-bottom: 0;
+}
+
+.skills {
+  position: relative;
+  height: auto;
+  padding: 40px 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.box-cont-hard {
+  display: inline-block;
+  width: 80%;
+}
+
+.box-cont-soft {
+  display: inline-block;
+  margin-left: 30px;
+  width: 30%;
+}
+
+.item-hard-skills {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
+  background-color: #f8f8f8;
+}
+
+.item-ux-ui-prog {
+  /* SINGOLO ITEM*/
+  padding: 24px;
+}
+
+.item-soft-skills {
+  padding: 24px;
+  background-color: #f8f8f8;
+}
+
+.item-hard-skills ul {
+  padding: 8px 0 0 24px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  /*light*/
+  line-height: 21px;
+}
+
+/* SEZIONE SERVIZI */
+.services {
+  position: relative;
+  height: 100%;
+  padding: 80px 20%;
+  text-align: center;
+  background-color: #f8f8f8;
+}
+
+.box-cont-services {
+  /* Griglia cosa faccio - Servizi */
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
+}
+
+.item-services {
+  padding: 24px;
+  text-align: center;
+  background-color: white;
+  border-radius: 32px;
+  border: 1px solid #eaeaea;
+  border-top: 4px solid #ffd602;
+  -webkit-transition: all .30s;
+  transition: all .30s;
+}
+
+.item-services:hover {
+  cursor: pointer;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  -webkit-box-shadow: 0px 0px 52px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 52px 10px rgba(0, 0, 0, 0.1);
+}
+
+.icon-services {
+  width: 100%;
+  padding-bottom: 32px;
+}
+
+h3 .item-services {
+  padding-bottom: 8px;
+}
+
+/* SEZIONE CONTATTI */
+.contatti {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 180px 20%;
+}
+
+.item-xs-contatti {
+  width: 50%;
+  margin-right: 15px;
+}
+
+.item-dx-contatti {
+  width: 50%;
+  margin-left: 15px;
+}
+
+.box-icone-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 8px;
+}
+
+.box-icone-social a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #292929;
+  padding-right: 8px;
+}
+
+.box-icone-social a:hover {
+  color: #ffd602;
+  -webkit-transition: all .30s;
+  transition: all .30s;
+}
+
+.form-row {
+  /* Contenitore di ogni elemento input */
+  height: auto;
+  padding-bottom: 20px;
+}
+
+.contatti-form {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.contatti-form input, textarea {
+  /*resize: none;*/
+  width: 100%;
+  height: 48px;
+  padding: 20px;
+  border: 1px solid #eaeaea;
+  border-radius: 4px;
+  background: #f8f8f8;
+  color: gray;
+}
+
+.check {
+  width: 14px !important;
+  height: 14px !important;
+}
+
+.contatti-form textarea {
+  min-height: 200px;
+  max-width: 100%;
+}
+
+.privacy {
+  font-size: 14px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+}
+
+/* BOTTONE INVIA */
+.contatti-form .send {
+  display: inline-block;
+  width: 30%;
+  height: 40px;
+  padding: 13px 16px;
+  background: #ffd602;
+  border: none;
+  border-radius: 100px;
+  font-size: 14px;
+  color: #292929;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+  /*light*/
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  -webkit-transition: all .30s;
+  transition: all .30s;
+}
+
+.contatti-form .send:hover {
+  cursor: pointer;
+  color: white;
+  background: #292929;
+}
+
+/* Footer */
+.footer {
+  padding: 24px 20%;
+  height: auto;
+  color: white;
+  background-color: #292929;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.box-logo-footer {
+  width: 50%;
+}
+
+.box-logo-footer img {
+  width: 70px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.box-iconesocial-copyright {
+  width: 50%;
+  display: inline-block;
+  padding-top: 16px;
+  text-align: right;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.iconesocial a {
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  padding-left: 8px;
+}
+
+.iconesocial a:hover {
+  color: #ffd602;
+  -webkit-transition: all .30s;
+  transition: all .30s;
+}
+
+.copyright {
+  text-align: right;
+  padding-top: 16px;
+}
+
+/* TYPOGRAPHY */
+.big {
+  /* Titolo pag hero */
+  font-size: 80px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+  /*Bold*/
+  line-height: 90px;
+  padding-bottom: 0;
+}
+
+.title-section {
+  /* Titolo della sezione*/
+  font-size: 32px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+  /*Bold*/
+  /*Padding:;*/
+  text-align: center;
+}
+
+h1 {
+  font-size: 42px;
+  /* Titolo about */
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+  /*Bold*/
+  padding-bottom: 16px;
+}
+
+h2 {
+  font-size: 24px;
+  font-family: 'Bodoni Moda', serif;
+  font-weight: 400;
+  /*italic regular*/
+  padding-bottom: 24px;
+}
+
+h3 {
+  font-size: 22px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+  /*bold*/
+  padding-bottom: 16px;
+}
+
+.h3-project {
+  font-size: 18px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+  /*bold*/
+  padding-bottom: 16px;
+  text-transform: uppercase;
+}
+
+h4 {
+  font-size: 18px;
+  font-family: 'Bodoni Moda', serif;
+  font-weight: 400;
+  /*italic regular*/
+}
+
+h5 {
+  padding: 16px 0 8px 0;
+  font-size: 12px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  /*light*/
+  text-transform: uppercase;
+  line-height: 21px;
+  color: #292929;
+}
+
+p {
+  font-size: 16px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  /*Light*/
+  line-height: 24px;
+}
+
+.settore-skills {
+  font-size: 16px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+  /*bold*/
+  line-height: 21px;
+  color: #292929;
+}
+
+/* Link in about start2impact*/
+.s2i {
+  color: #292929;
+  text-decoration: underline;
+}
+
+.img-portfolio .img-progetto {
+  width: 100%;
+}
+
+/* Mobile / Tablet */
+@media (max-width: 768px) {
+  header {
+    height: auto;
+    width: 100%;
+    background-color: white;
+    padding: 0;
+  }
+  .navbar {
+    padding: 10px 15px 5px 15px;
+    width: 100%;
+    min-height: 80px;
+  }
+  .nav-menu {
+    position: fixed;
+    top: 80px;
+    padding: 32px;
+    left: -100%;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: #292929;
+    text-align: center;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .nav-menu a {
+    color: white;
+  }
+  .nav-menu li {
+    margin-left: 0;
+    padding: 24px;
+    width: 100%;
+    border-bottom: 1px solid #595959;
+  }
+  .nav-menu li a::after {
+    content: '';
+    display: none;
+  }
+  .nav-menu.active {
+    left: 0;
+  }
+  .nav-logo {
+    width: 180px;
+  }
+  .hamburger {
+    display: block;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    -webkit-transform: translateY(7px) rotate(45deg);
+            transform: translateY(7px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    -webkit-transform: translateY(-7px) rotate(-45deg);
+            transform: translateY(-7px) rotate(-45deg);
+  }
+  .secondary-button {
+    margin-left: 0;
+    margin: 24px 0 24px 0;
+    color: white;
+  }
+  .secondary-button:hover, .secondary-button:active {
+    background-color: transparent;
+    border: 2px solid white;
+  }
+  section {
+    /* SECTION DI BASE */
+    width: 100%;
+    padding: 80px 15px 0 15px;
+  }
+  .big {
+    font-size: 60px;
+    line-height: 70px;
+  }
+  h1 {
+    font-size: 32px;
+  }
+  h2 {
+    font-size: 24px;
+    padding-bottom: 18px;
+  }
+  /* SECTION HOMEPAGE */
+  .box-cont-homepage {
+    width: 100%;
+    display: inline-block;
+    padding-top: 80px;
+  }
+  .item-xs-homepage {
+    width: 100%;
+    padding-bottom: 48px;
+  }
+  .item-dx-homepage {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .item-dx-homepage img {
+    width: 100%;
+  }
+  /* SECTION PORTFOLIO */
+  .portfolio {
+    padding-top: 80px;
+    display: inline-block;
+  }
+  .grid-portfolio {
+    /* GRIGLIA CONTENITRICE */
+    height: 100%;
+    row-gap: 48px;
+    padding: 32px 0 0 0;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .img-portfolio:hover {
+    display: none;
+  }
+  /* SECTION ABOUT */
+  .about {
+    height: 100%;
+  }
+  .box-cont-about {
+    height: 100%;
+    padding: 0;
+    display: inline-block;
+  }
+  .item-xs-about {
+    width: 100%;
+    margin-right: 0;
+    padding-bottom: 32px;
+  }
+  .item-dx-about {
+    width: 100%;
+    margin-left: 0;
+  }
+  .item-dx-about img {
+    width: 100%;
+  }
+  /* Sezione CV e SKILLS*/
+  .cv {
+    width: 100%;
+    display: inline-block;
+    padding: 0 15px 0 15px;
+  }
+  .box-cont-lavoro {
+    width: 100%;
+    padding-top: 80px;
+    margin-right: 0;
+  }
+  .box-cont-formazione {
+    width: 100%;
+    padding-top: 40px;
+  }
+  .skills {
+    padding: 80px 15px 80px 15px;
+    display: inline-block;
+  }
+  .box-cont-hard {
+    width: 100%;
+    display: inline-block;
+  }
+  .box-cont-soft {
+    width: 100%;
+    display: inline-block;
+    margin-left: 0;
+    padding-top: 32px;
+  }
+  .item-hard-skills {
+    /* GRIGLIA DI 3 ITEM*/
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  /* SEZIONE SERVIZI */
+  .services {
+    padding: 80px 15px 80px 15px;
+    width: 100%;
+  }
+  .box-cont-services {
+    /* Griglia cosa faccio - Servizi */
+    width: 100%;
+    padding: 0;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    row-gap: 40px;
+    text-align: center;
+  }
+  .item-services {
+    width: 80%;
+    margin: 0 auto;
+    -webkit-box-shadow: 0px 0px 24px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 0px 24px 8px rgba(0, 0, 0, 0.1);
+  }
+  .item-services:hover {
+    display: none;
+  }
+  .contatti {
+    width: 100%;
+    padding: 80px 15px 48px 15px;
+    display: inline-block;
+  }
+  .item-xs-contatti {
+    width: 100%;
+    margin-right: 0;
+    padding-bottom: 64px;
+  }
+  .item-dx-contatti {
+    width: 100%;
+    margin-left: 0;
+  }
+  /* Footer */
+  .footer {
+    width: 100%;
+    position: relative;
+    padding: 24px 15px;
+    display: inline-block;
+  }
+  .box-logo-footer {
+    width: 100%;
+    padding-bottom: 24px;
+    text-align: center;
+  }
+  .box-logo-footer img {
+    width: 70px;
+  }
+  .box-iconesocial-copyright {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+  }
+  .iconesocial a {
+    padding: 20px;
+  }
+  .copyright {
+    text-align: center;
+  }
+  .go-top-btn {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+/* Tablet / Desktop */
+@media (min-width: 769px) and (max-width: 992px) {
+  header {
+    height: auto;
+    width: 100%;
+    background-color: white;
+    padding: 0 4%;
+  }
+  .navbar {
+    padding: 0;
+    width: 100%;
+    min-height: 80px;
+  }
+  .nav-menu {
+    position: fixed;
+    top: 80px;
+    padding: 32px;
+    left: -100%;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: #292929;
+    text-align: center;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .nav-menu a {
+    color: white;
+  }
+  .nav-menu li {
+    margin-left: 0;
+    padding: 24px;
+    width: 100%;
+    border-bottom: 1px solid #595959;
+  }
+  .nav-menu li a::after {
+    content: '';
+    display: none;
+  }
+  .nav-menu.active {
+    left: 0;
+  }
+  .nav-logo {
+    width: 180px;
+  }
+  .hamburger {
+    display: block;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    -webkit-transform: translateY(7px) rotate(45deg);
+            transform: translateY(7px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    -webkit-transform: translateY(-7px) rotate(-45deg);
+            transform: translateY(-7px) rotate(-45deg);
+  }
+  .secondary-button {
+    margin-left: 0;
+    margin: 24px 0 24px 0;
+    color: white;
+  }
+  .secondary-button:hover, .secondary-button:active {
+    background-color: transparent;
+    border: 2px solid white;
+  }
+  section {
+    /* SECTION DI BASE */
+    width: 100%;
+    padding: 80px 4% 0 4%;
+  }
+  .big {
+    font-size: 60px;
+    line-height: 70px;
+  }
+  h1 {
+    font-size: 32px;
+  }
+  h2 {
+    font-size: 24px;
+    padding-bottom: 18px;
+  }
+  /* SECTION HOMEPAGE */
+  .box-cont-homepage {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 80px;
+  }
+  .item-xs-homepage {
+    width: 50%;
+    margin-right: 15px;
+  }
+  .item-dx-homepage {
+    width: 50%;
+    margin-left: 15px;
+  }
+  .item-dx-homepage img {
+    width: 100%;
+  }
+  /* SECTION PORTFOLIO */
+  .portfolio {
+    padding-top: 120px;
+    display: inline-block;
+  }
+  .grid-portfolio {
+    /* GRIGLIA CONTENITRICE */
+    height: 100%;
+    row-gap: 48px;
+    padding: 32px 0 0 0;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .img-portfolio:hover {
+    display: none;
+  }
+  /* SECTION ABOUT */
+  .about {
+    height: 100%;
+  }
+  .box-cont-about {
+    height: 100%;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .item-xs-about {
+    width: 50%;
+    margin-right: 15px;
+  }
+  .item-dx-about {
+    width: 50%;
+    margin-left: 15px;
+  }
+  .item-dx-about img {
+    width: 100%;
+  }
+  /* Sezione CV e SKILLS*/
+  .cv {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0 4%;
+  }
+  .box-cont-lavoro {
+    width: 50%;
+    padding-top: 80px;
+    margin-right: 15px;
+  }
+  .box-cont-formazione {
+    width: 50%;
+    padding-top: 80px;
+    margin-left: 15px;
+  }
+  .skills {
+    padding: 80px 4% 80px 4%;
+    display: inline-block;
+  }
+  .box-cont-hard {
+    width: 100%;
+    display: inline-block;
+  }
+  .box-cont-soft {
+    width: 100%;
+    display: inline-block;
+    margin-left: 0;
+    padding-top: 32px;
+  }
+  .item-hard-skills {
+    /* GRIGLIA DI 3 ITEM*/
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+  /* SEZIONE SERVIZI */
+  .services {
+    padding: 80px 4%;
+    width: 100%;
+  }
+  .box-cont-services {
+    /* Griglia cosa faccio - Servizi */
+    width: 100%;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -webkit-column-gap: 30px;
+            column-gap: 30px;
+    row-gap: 30px;
+    text-align: center;
+  }
+  .item-services {
+    width: 100%;
+    margin: 0 auto;
+    -webkit-box-shadow: 0px 0px 24px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 0px 24px 8px rgba(0, 0, 0, 0.1);
+  }
+  .item-services:hover {
+    display: none;
+  }
+  .contatti {
+    width: 100%;
+    padding: 80px 4% 48px 4%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .item-xs-contatti {
+    width: 100%;
+    margin-right: 15px;
+    padding-bottom: 64px;
+  }
+  .item-dx-contatti {
+    width: 100%;
+    margin-left: 15px;
+  }
+  /* Footer */
+  .footer {
+    width: 100%;
+    position: relative;
+    padding: 24px 15px;
+    display: inline-block;
+  }
+  .box-logo-footer {
+    width: 100%;
+    padding-bottom: 24px;
+    text-align: center;
+  }
+  .box-logo-footer img {
+    width: 70px;
+  }
+  .box-iconesocial-copyright {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+  }
+  .iconesocial a {
+    padding: 20px;
+  }
+  .copyright {
+    text-align: center;
+  }
+  .go-top-btn {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+/* Desktop - Schermi grandi */
+@media (min-width: 993px) and (max-width: 1279px) {
+  header {
+    height: 100px;
+    width: 100%;
+    padding: 25px 10%;
+  }
+  .nav-menu a {
+    padding: 0;
+  }
+  section {
+    /* SECTION DI BASE */
+    width: 100%;
+    height: 100vh;
+    padding: 80px 10% 0 10%;
+  }
+  /* SECTION HOMEPAGE */
+  .homepage {
+    width: 100%;
+    height: 100%;
+    padding-top: 40px;
+  }
+  .box-cont-homepage {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 130px;
+  }
+  .item-xs-homepage {
+    width: 50%;
+    margin-right: 15px;
+  }
+  .item-dx-homepage {
+    width: 50%;
+    margin-left: 15px;
+  }
+  .item-dx-homepage img {
+    width: 100%;
+  }
+  /* SECTION PORTFOLIO */
+  .portfolio {
+    padding-top: 160px;
+    display: inline-block;
+  }
+  .grid-portfolio {
+    /* GRIGLIA CONTENITRICE */
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 48px;
+    padding: 32px 0 0 0;
+  }
+  /* SECTION ABOUT */
+  .about {
+    position: relative;
+    height: 100%;
+  }
+  .box-cont-about {
+    width: 100%;
+    padding-top: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .item-xs-about {
+    width: 50%;
+    margin-right: 15px;
+    padding-bottom: 32px;
+  }
+  .item-dx-about {
+    width: 50%;
+    margin-left: 15px;
+  }
+  .item-dx-about img {
+    width: 100%;
+  }
+  /* Sezione CV e SKILLS*/
+  .cv {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0 10% 0 10%;
+  }
+  .box-cont-lavoro {
+    width: 50%;
+    padding-top: 40px;
+    margin-right: 0;
+  }
+  .box-cont-formazione {
+    width: 50%;
+    padding-top: 40px;
+  }
+  .skills {
+    padding: 80px 10% 80px 10%;
+    display: inline-block;
+  }
+  .box-cont-hard {
+    width: 100%;
+    display: inline-block;
+    padding-bottom: 32px;
+  }
+  .box-cont-soft {
+    width: 100%;
+    display: inline-block;
+    margin-left: 0;
+  }
+  .item-hard-skills {
+    /* GRIGLIA DI 3 ITEM*/
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+  /* SEZIONE SERVIZI */
+  .services {
+    padding: 80px 10% 80px 10%;
+    width: 100%;
+    text-align: center;
+    background-color: #f8f8f8;
+  }
+  .box-cont-services {
+    /* Griglia cosa faccio - Servizi */
+    width: 100%;
+    padding: 40px 0 0 0;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 30px;
+    -webkit-column-gap: 30px;
+            column-gap: 30px;
+    text-align: center;
+  }
+  .item-services {
+    width: 100%;
+    -webkit-box-shadow: 0px 0px 24px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 0px 24px 8px rgba(0, 0, 0, 0.1);
+  }
+  .contatti {
+    width: 100%;
+    padding: 80px 10% 48px 10%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .item-xs-contatti {
+    width: 50%;
+    padding-bottom: 64px;
+    margin-right: 15px;
+  }
+  .item-dx-contatti {
+    width: 50%;
+    margin-left: 15px;
+  }
+  /* Footer */
+  .footer {
+    width: 100%;
+    position: relative;
+    padding: 24px 10%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+/* Schermi grandi oltre 1280px */
+@media (min-width: 1280) {
+  header {
+    height: 100px;
+    width: 100%;
+    padding: 25px 20%;
+  }
+  section {
+    /* SECTION DI BASE */
+    width: 100%;
+    height: 100vh;
+    padding: 80px 20% 0 20%;
+  }
+  /* SECTION HOMEPAGE */
+  .homepage {
+    width: 100%;
+    height: 100%;
+    padding-top: 40px;
+  }
+  .box-cont-homepage {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 130px;
+  }
+  .item-xs-homepage {
+    width: 50%;
+    margin-right: 15px;
+  }
+  .item-dx-homepage {
+    width: 50%;
+    margin-left: 15px;
+  }
+  .item-dx-homepage img {
+    width: 100%;
+  }
+  /* SECTION PORTFOLIO */
+  .portfolio {
+    padding-top: 160px;
+    display: inline-block;
+  }
+  .grid-portfolio {
+    /* GRIGLIA CONTENITRICE */
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 48px;
+    padding: 32px 0 0 0;
+  }
+  .img-portfolio:hover {
+    display: none;
+  }
+  /* SECTION ABOUT */
+  .about {
+    position: relative;
+    height: 100%;
+  }
+  .box-cont-about {
+    width: 100%;
+    padding-top: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .item-xs-about {
+    width: 50%;
+    margin-right: 15px;
+    padding-bottom: 32px;
+  }
+  .item-dx-about {
+    width: 50%;
+    margin-left: 15px;
+  }
+  .item-dx-about img {
+    width: 100%;
+  }
+  /* Sezione CV e SKILLS*/
+  .cv {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0 10% 0 10%;
+  }
+  .box-cont-lavoro {
+    width: 50%;
+    padding-top: 40px;
+    margin-right: 0;
+  }
+  .box-cont-formazione {
+    width: 50%;
+    padding-top: 40px;
+  }
+  .skills {
+    padding: 80px 10% 80px 10%;
+    display: inline-block;
+  }
+  .box-cont-hard {
+    width: 100%;
+    display: inline-block;
+    padding-bottom: 32px;
+  }
+  .box-cont-soft {
+    width: 100%;
+    display: inline-block;
+    margin-left: 0;
+  }
+  .item-hard-skills {
+    /* GRIGLIA DI 3 ITEM*/
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+  /* SEZIONE SERVIZI */
+  .services {
+    padding: 80px 10% 80px 10%;
+    width: 100%;
+    text-align: center;
+    background-color: #f8f8f8;
+  }
+  .box-cont-services {
+    /* Griglia cosa faccio - Servizi */
+    width: 100%;
+    padding: 40px 0 0 0;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 30px;
+    -webkit-column-gap: 30px;
+            column-gap: 30px;
+    text-align: center;
+  }
+  .item-services {
+    width: 100%;
+    -webkit-box-shadow: 0px 0px 24px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 0px 24px 8px rgba(0, 0, 0, 0.1);
+  }
+  .contatti {
+    width: 100%;
+    padding: 80px 10% 48px 10%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .item-xs-contatti {
+    width: 50%;
+    padding-bottom: 64px;
+    margin-right: 15px;
+  }
+  .item-dx-contatti {
+    width: 50%;
+    margin-left: 15px;
+  }
+  /* Footer */
+  .footer {
+    width: 100%;
+    position: relative;
+    padding: 24px 10%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+/* Schermi grandi e oltre 
+@media  (min-width: 1280px) {
+
+  section { /* SECTION DI BASE 
+    width: 100%;
+    height: 100vh;
+    padding: 80px 20% 0 20%;
+  }
+
+} 
+
+*/
+/*# sourceMappingURL=stile.css.map */
