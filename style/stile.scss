@@ -169,6 +169,7 @@ min-width: 200px;
   height: 40px;
   margin-left: 48px;
   padding: 12px 16px;
+  color: $text-black-color;
   background-color: transparent;
   border: 2px solid $accent-color;
   border-radius: 100px;
@@ -185,11 +186,20 @@ min-width: 200px;
   color: $text-black-color;
 }
 
-.secondary-button:hover {
+.secondary-button:hover, .secondary-button:active {
   cursor: pointer;
   background-color: transparent;
   border: 2px solid $text-black-color;
+  color: $text-black-color;
 }
+
+.secondary-button:visited{
+  background-color: transparent;
+  border: 2px solid $accent-color;
+  color: $text-black-color;
+}
+
+
 
 .primary-button {  /*YELLOW BUTTON */
   height: 40px;

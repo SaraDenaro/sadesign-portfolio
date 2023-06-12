@@ -199,6 +199,7 @@ a {
   height: 40px;
   margin-left: 48px;
   padding: 12px 16px;
+  color: #292929;
   background-color: transparent;
   border: 2px solid #ffd602;
   border-radius: 100px;
@@ -217,10 +218,17 @@ a {
   color: #292929;
 }
 
-.secondary-button:hover {
+.secondary-button:hover, .secondary-button:active {
   cursor: pointer;
   background-color: transparent;
   border: 2px solid #292929;
+  color: #292929;
+}
+
+.secondary-button:visited {
+  background-color: transparent;
+  border: 2px solid #ffd602;
+  color: #292929;
 }
 
 .primary-button {
