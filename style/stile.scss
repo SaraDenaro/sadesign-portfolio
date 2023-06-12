@@ -505,7 +505,7 @@ h3 .item-services {
   color: gray;
 }
 
-.check {
+.form-row .check {
   width: 14px !important;
   height: 14px !important;
 }
@@ -687,11 +687,6 @@ font-weight: 400; /*bold*/
 /* Mobile / Tablet */
 @media (max-width: 768px){
 
-  .check {
-    width: 14px !important;
-    height: 14px !important;
-  }
-
   header {
     height: auto;
     width: 100%;
@@ -766,6 +761,7 @@ font-weight: 400; /*bold*/
   .secondary-button:hover, .secondary-button:active {
     background-color: transparent;
     border: 2px solid white;
+    color: white;
   }
 
   section { /* SECTION DI BASE */
