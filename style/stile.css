@@ -883,7 +883,7 @@ p {
   }
   .box-cont-about {
     height: 100%;
-    padding: 120px 0 0 0;
+    padding: 120px 15px 0 15px;
     display: inline-block;
   }
   .item-xs-about {
