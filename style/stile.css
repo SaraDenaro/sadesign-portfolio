@@ -697,7 +697,7 @@ h3 {
 
 .h3-project {
   font-size: 18px;
-  font-family: 'Bodoni Moda', serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-weight: 700;
   /*bold*/
   padding-bottom: 16px;
@@ -749,8 +749,19 @@ p {
   width: 100%;
 }
 
+.keyword {
+  font-size: 16px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+  /*bold*/
+}
+
 /* Mobile / Tablet */
 @media (max-width: 768px) {
+  .check {
+    width: 14px !important;
+    height: 14px !important;
+  }
   header {
     height: auto;
     width: 100%;
@@ -854,7 +865,7 @@ p {
   }
   /* SECTION PORTFOLIO */
   .portfolio {
-    padding-top: 80px;
+    padding-top: 120px;
     display: inline-block;
   }
   .grid-portfolio {
@@ -865,16 +876,14 @@ p {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
-  .img-portfolio:hover {
-    display: none;
-  }
   /* SECTION ABOUT */
   .about {
     height: 100%;
+    padding: 0;
   }
   .box-cont-about {
     height: 100%;
-    padding: 0;
+    padding: 120px 0 0 0;
     display: inline-block;
   }
   .item-xs-about {
