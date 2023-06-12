@@ -464,6 +464,15 @@ h3 .item-services {
   transition: all .30s;
 }
 
+.box-icone-social:visited {
+  color: $text-black-color;
+}
+
+.box-icone-social a:hover {
+  color: $accent-color;
+}
+
+
 .form-row{ /* Contenitore di ogni elemento input */
   height: auto;
   padding-bottom: 20px;
@@ -752,7 +761,6 @@ font-weight: 400; /*bold*/
   section { /* SECTION DI BASE */
     width: 100%;
     padding: 80px 15px 0 15px;
-    background-color: red;
   }
 
   .big {
