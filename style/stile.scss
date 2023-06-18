@@ -1,8 +1,7 @@
 /* Gestione colori */
   $text-black-color: #292929;
   $text-gray-color: #595959;
-  $border-gray-color: #eaeaea;
-  $bg-gray-color: #f8f8f8;
+  $border-bg-gray-color: #eaeaea;
   $accent-color: #ffd602;
 
 
@@ -131,7 +130,7 @@ min-width: 200px;
   font-size: 16px;
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 400; 
-  padding: 10px 20px;
+  padding: 10px 0;
   color: $text-black-color;
   text-decoration: none;
 }
@@ -380,7 +379,7 @@ section { /* SECTION DI BASE */
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 30px;
-  background-color: $bg-gray-color;
+  background-color: $border-bg-gray-color;
 }
 
 .item-ux-ui-prog{ /* SINGOLO ITEM*/
@@ -389,7 +388,7 @@ section { /* SECTION DI BASE */
 
 .item-soft-skills {
   padding: 24px;
-  background-color: $bg-gray-color;
+  background-color: $border-bg-gray-color;
 }
 
 .item-hard-skills ul{
@@ -405,7 +404,7 @@ section { /* SECTION DI BASE */
   height: 100%;
   padding: 80px 20%;
   text-align: center;
-  background-color: $bg-gray-color;
+  background-color: $border-bg-gray-color;
 }
 
 .box-cont-services { /* Griglia cosa faccio - Servizi */
@@ -501,7 +500,7 @@ h3 .item-services {
   padding: 20px;
   border: 1px solid $border-gray-color;
   border-radius: 4px;
-  background: $bg-gray-color;
+  background: $border-bg-gray-color;
   color: gray;
 }
 
@@ -615,7 +614,7 @@ h1 {
 h2 {
   font-size: 24px;
   font-family: 'Bodoni Moda', serif;
-  font-weight: 400; 
+  font-weight: 400; /*italic regular*/
   font-style: italic;
   padding-bottom: 24px;
 }
@@ -648,7 +647,7 @@ font-family: 'Josefin Sans', sans-serif;
 font-weight:300; /*light*/
 text-transform: uppercase;
 line-height: 21px;
-color: $text-black-color;
+color: $text-gray-color;
 }
 
 p {
@@ -770,8 +769,8 @@ font-weight: 400; /*bold*/
   }
 
   .big {
-      font-size: 60px;
-      line-height: 70px;
+    font-size: 60px;
+    line-height: 70px;
   }
 
   h1{
@@ -1252,7 +1251,6 @@ font-weight: 400; /*bold*/
 //////////////////////////////////////////////////////////
 
 
-
 /* Desktop - Schermi grandi */
 @media (min-width: 993px) and (max-width: 1279px){
 
@@ -1386,7 +1384,7 @@ font-weight: 400; /*bold*/
   padding: 80px 10% 80px 10%;
   width: 100%;
   text-align: center;
-  background-color: $bg-gray-color;
+  background-color: $border-bg-gray-color;
   }
   
   .box-cont-services { /* Griglia cosa faccio - Servizi */
@@ -1432,7 +1430,7 @@ font-weight: 400; /*bold*/
 //////////////////////////////////////////////////////////
 
 /* Schermi grandi oltre 1280px */
-@media (min-width: 1280){
+@media (min-width: 1280px){
 
   header {
     height: 100px;
@@ -1563,7 +1561,7 @@ font-weight: 400; /*bold*/
   padding: 80px 10% 80px 10%;
   width: 100%;
   text-align: center;
-  background-color: $bg-gray-color;
+  background-color: $border-bg-gray-color;
   }
   
   .box-cont-services { /* Griglia cosa faccio - Servizi */
@@ -1606,19 +1604,3 @@ font-weight: 400; /*bold*/
   }
 
 
-
-
-
-
-/* Schermi grandi e oltre 
-@media  (min-width: 1280px) {
-
-  section { /* SECTION DI BASE 
-    width: 100%;
-    height: 100vh;
-    padding: 80px 20% 0 20%;
-  }
-
-} 
-
-*/
