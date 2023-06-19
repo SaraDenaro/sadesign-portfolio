@@ -1526,15 +1526,11 @@ p {
     display: flex;
   }
   .box-cont-hard {
-    width: 50% auto;
     display: inline-block;
     padding-bottom: 32px;
-    margin-right: 15px;
   }
   .box-cont-soft {
-    width: 50% auto;
     display: inline-block;
-    margin-left: 15px;
   }
   .item-hard-skills {
     /* GRIGLIA DI 3 ITEM*/
