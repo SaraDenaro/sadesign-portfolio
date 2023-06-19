@@ -4,7 +4,6 @@
   $border-bg-gray-color: #eaeaea;
   $accent-color: #ffd602;
 
-
 * {
   margin: 0;
   padding: 0;
@@ -55,7 +54,7 @@ html::-webkit-scrollbar { /* Chrome */
 
 html::-webkit-scrollbar-track {  /* Chrome */
   background-color: white;
-  border: 1px solid $border-gray-color;
+  border: 1px solid #eaeaea;
 }
 
 html::-webkit-scrollbar-thumb {  /* Chrome */
@@ -130,7 +129,7 @@ min-width: 200px;
   font-size: 16px;
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 400; 
-  padding: 10px 0;
+  padding: 0 !important;
   color: $text-black-color;
   text-decoration: none;
 }
@@ -299,7 +298,7 @@ section { /* SECTION DI BASE */
 .img-portfolio {
   width: 100%;
   border-radius: 8px;
-  border: 1px solid $border-gray-color;
+  border: 1px solid $border-bg-gray-color;
   transition: all .30s;
 }
 
@@ -498,7 +497,7 @@ h3 .item-services {
   width: 100%;
   height: 48px;
   padding: 20px;
-  border: 1px solid $border-gray-color;
+  border: 1px solid $border-bg-gray-color;
   border-radius: 4px;
   background: $border-bg-gray-color;
   color: gray;
