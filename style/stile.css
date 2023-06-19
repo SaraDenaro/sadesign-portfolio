@@ -1434,13 +1434,13 @@ p {
   header {
     height: 100px;
     width: 100%;
-    padding: 25px 20%;
+    padding: 25px 15%;
   }
   section {
     /* SECTION DI BASE */
     width: 100%;
     height: 100vh;
-    padding: 80px 20% 0 20%;
+    padding: 80px 15% 0 15%;
   }
   /* SECTION HOMEPAGE */
   .homepage {
@@ -1478,9 +1478,6 @@ p {
     row-gap: 48px;
     padding: 32px 0 0 0;
   }
-  .img-portfolio:hover {
-    display: none;
-  }
   /* SECTION ABOUT */
   .about {
     position: relative;
@@ -1488,7 +1485,7 @@ p {
   }
   .box-cont-about {
     width: 100%;
-    padding-top: 100px;
+    padding: 100px 0 60px 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1503,7 +1500,7 @@ p {
     margin-left: 15px;
   }
   .item-dx-about img {
-    width: 100%;
+    width: 80%;
   }
   /* Sezione CV e SKILLS*/
   .cv {
@@ -1511,7 +1508,7 @@ p {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding: 0 10% 0 10%;
+    padding: 0 15% 0 15%;
   }
   .box-cont-lavoro {
     width: 50%;
@@ -1523,18 +1520,21 @@ p {
     padding-top: 40px;
   }
   .skills {
-    padding: 80px 10% 80px 10%;
-    display: inline-block;
+    padding: 80px 15% 80px 15%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .box-cont-hard {
-    width: 100%;
+    width: 50%;
     display: inline-block;
     padding-bottom: 32px;
+    margin-right: 15px;
   }
   .box-cont-soft {
-    width: 100%;
+    width: 50%;
     display: inline-block;
-    margin-left: 0;
+    margin-left: 15px;
   }
   .item-hard-skills {
     /* GRIGLIA DI 3 ITEM*/
@@ -1543,7 +1543,7 @@ p {
   }
   /* SEZIONE SERVIZI */
   .services {
-    padding: 80px 10% 80px 10%;
+    padding: 80px 15% 80px 15%;
     width: 100%;
     text-align: center;
     background-color: #eaeaea;
@@ -1566,7 +1566,7 @@ p {
   }
   .contatti {
     width: 100%;
-    padding: 80px 10% 48px 10%;
+    padding: 80px 15% 48px 15%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1584,7 +1584,7 @@ p {
   .footer {
     width: 100%;
     position: relative;
-    padding: 24px 10%;
+    padding: 24px 15%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
