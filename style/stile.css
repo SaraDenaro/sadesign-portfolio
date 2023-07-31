@@ -760,6 +760,7 @@ p {
 .s2i {
   color: #292929;
   text-decoration: underline;
+  font-weight: 400;
 }
 
 .img-portfolio .img-progetto {
