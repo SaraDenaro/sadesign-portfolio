@@ -2,6 +2,7 @@
   $text-black-color: #292929;
   $text-gray-color: #595959;
   $border-bg-gray-color: #eaeaea;
+  $background-gray-color: #F7F7F7;
   $accent-color: #ffd602;
 
 * {
@@ -403,7 +404,7 @@ section { /* SECTION DI BASE */
   height: 100%;
   padding: 80px 20%;
   text-align: center;
-  background-color: $border-bg-gray-color;
+  background-color: $background-gray-color;
 }
 
 .box-cont-services { /* Griglia cosa faccio - Servizi */
@@ -1552,7 +1553,6 @@ font-weight: 400; /*bold*/
   padding: 80px 15% 80px 15%;
   width: 100%;
   text-align: center;
-  background-color: $border-bg-gray-color;
   }
   
   .box-cont-services { /* Griglia cosa faccio - Servizi */
